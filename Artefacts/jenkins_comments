@@ -1,0 +1,6 @@
+npm --prefix .\FrontEnd\angular-app install .\FrontEnd\angular-app
+npm run build --prefix .\FrontEnd\angular-app
+mvn -f MidTier\authentication-service\pom.xml clean package -Dhttp.proxyHost=proxy.cognizant.com -Dhttp.proxyPort=6050 -Dhttps.proxyHost=proxy.cognizant.com -Dhttps.proxyPort=6050 -Dhttp.proxyUser=123456 -Dhttp.proxyPassword=password -Dmaven.test.skip=true
+mvn -f MidTier\eureka-server\pom.xml clean package -Dhttp.proxyHost=proxy.cognizant.com -Dhttp.proxyPort=6050 -Dhttps.proxyHost=proxy.cognizant.com -Dhttps.proxyPort=6050 -Dhttp.proxyUser=123456 -Dhttp.proxyPassword=password -Dmaven.test.skip=true
+mvn -f MidTier\zuul-gateway\pom.xml clean package -Dhttp.proxyHost=proxy.cognizant.com -Dhttp.proxyPort=6050 -Dhttps.proxyHost=proxy.cognizant.com -Dhttps.proxyPort=6050 -Dhttp.proxyUser=123456 -Dhttp.proxyPassword=password -Dmaven.test.skip=true
+mvn -f MidTier\stock-service\pom.xml clean package -Dhttp.proxyHost=proxy.cognizant.com -Dhttp.proxyPort=6050 -Dhttps.proxyHost=proxy.cognizant.com -Dhttps.proxyPort=6050 -Dhttp.proxyUser=123456 -Dhttp.proxyPassword=password -Dmaven.test.skip=true
